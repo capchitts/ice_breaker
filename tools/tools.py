@@ -30,6 +30,7 @@ class CustomSerpAPIWrapper(SerpAPIWrapper):
         ):
             toret = res["knowledge_graph"]["description"]
         elif "snippet" in res["organic_results"][0].keys():
+            #this resolved the link issue
             toret = res["organic_results"][0]["link"]
 
         else:
